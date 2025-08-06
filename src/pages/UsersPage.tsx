@@ -16,11 +16,6 @@ interface UserResponse {
   data: User;
 }
 
-interface NotificationPopup {
-  show: boolean;
-  type: 'success' | 'error';
-  message: string;
-}
 
 interface FormData {
   name: string;
@@ -40,18 +35,13 @@ const UsersPage: React.FC = () => {
   const [showAddForm, setShowAddForm] = useState<boolean>(false);
   const [editingUserId, setEditingUserId] = useState<number | null>(null);
   const [createdResponse, setCreatedResponse] = useState<UserResponse | null>(null);
-  const [notification, setNotification] = useState<NotificationPopup>({
-    show: false,
-    type: 'success',
-    message: ''
-  });
 
   // Filter states
   const [showFilterDropdown, setShowFilterDropdown] = useState<boolean>(false);
   const [activeFilters, setActiveFilters] = useState({
-    status: 'all', // all, active, inactive
-    domain: 'all', // all, gmail, yahoo, kapten, other
-    phonePrefix: 'all' // all, +62, local, international
+    status: 'all',
+    domain: 'all',
+    phonePrefix: 'all'
   });
 
   const [formData, setFormData] = useState<FormData>({
@@ -90,16 +80,8 @@ const UsersPage: React.FC = () => {
       setUsers(Array.isArray(usersData) ? usersData : []);
     } catch (error) {
       console.error('Error loading mock data:', error);
-      showNotification('error', 'Gagal memuat data user');
     }
   }, []);
-
-  const showNotification = (type: 'success' | 'error', message: string): void => {
-    setNotification({ show: true, type, message });
-    setTimeout(() => {
-      setNotification(prev => ({ ...prev, show: false }));
-    }, 3000);
-  };
 
   const validateForm = (data: FormData): boolean => {
     const newErrors: FormErrors = {
@@ -165,7 +147,6 @@ const UsersPage: React.FC = () => {
       setFormData({ name: '', email: '', phone: '' });
       setShowAddForm(false);
       setCreatedResponse(response);
-      showNotification('success', 'User berhasil dibuat');
 
       // Auto hide response after 5 seconds
       setTimeout(() => {
@@ -173,7 +154,6 @@ const UsersPage: React.FC = () => {
       }, 5000);
     } catch (error) {
       console.error('Error adding user:', error);
-      showNotification('error', 'Terjadi kesalahan saat menambah user');
     }
   };
 
@@ -201,10 +181,8 @@ const UsersPage: React.FC = () => {
           : user
       ));
       setEditingUserId(null);
-      showNotification('success', 'User berhasil diperbarui');
     } catch (error) {
       console.error('Error updating user:', error);
-      showNotification('error', 'Terjadi kesalahan saat memperbarui user');
     }
   };
 
@@ -225,7 +203,6 @@ const UsersPage: React.FC = () => {
   const confirmDeleteUser = (): void => {
     if (deleteConfirmation.userId) {
       setUsers(prev => prev.filter(user => user.id !== deleteConfirmation.userId));
-      showNotification('success', 'User berhasil dihapus');
       setDeleteConfirmation({
         isOpen: false,
         userId: null,
@@ -459,7 +436,7 @@ const UsersPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 sm:p-6 lg:p-8">
       <div className="max-w-7xl mx-auto p-6 space-y-8">
         {/* Header */}
         <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import {
   Home,
-  Package,
   LayoutGrid,
   FileText,
   ChevronRight,

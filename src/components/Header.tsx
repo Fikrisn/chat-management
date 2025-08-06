@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Bell, 
-  Menu, 
-  Settings, 
+  Menu,  
   User, 
   LogOut, 
   ChevronDown,
