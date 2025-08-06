@@ -1,0 +1,300 @@
+{
+  "categories": [
+    {
+        "id": 1,
+        "name": "Perpanjangan Layanan",
+        "description": "Dikirim setelah pelanggan memperpanjang masa aktif layanan internet mereka.",
+        "created_at": "2025-06-19T12:06:18.279Z"
+    },
+    {
+        "id": 2,
+        "name": "Pengingat Tagihan",
+        "description": "Pengingat otomatis sebelum jatuh tempo pembayaran tagihan layanan internet pelanggan.",
+        "created_at": "2025-06-19T12:08:03.828Z"
+    },
+    {
+        "id": 3,
+        "name": "Penyesuaian Teknis",
+        "description": "Informasi kepada pelanggan terkait reset, perbaikan, atau koreksi masa aktif karena kendala.",
+        "created_at": "2025-06-19T12:08:13.990Z"
+    },
+    {
+        "id": 4,
+        "name": "Survei Kepuasan",
+        "description": "Ajakan kepada pelanggan untuk mengisi survei guna evaluasi dan peningkatan layanan ISP.",
+        "created_at": "2025-06-19T12:08:21.784Z"
+    }
+  ],
+  "channels": [
+    {
+        "id": 1,
+        "name": "WhatsApp",
+        "description": "Notifikasi dikirim langsung ke WhatsApp pelanggan menggunakan nomor terdaftar.",
+        "created_at": "2025-06-19T14:16:59.619Z"
+    },
+    {
+        "id": 2,
+        "name": "Telegram",
+        "description": "Notifikasi disampaikan melalui bot Telegram resmi ISP.",
+        "created_at": "2025-06-19T14:17:14.829Z"
+    },
+    {
+        "id": 3,
+        "name": "In-App Notification",
+        "description": "Muncul sebagai notifikasi dalam aplikasi mobile milik pelanggan ISP.",
+        "created_at": "2025-06-19T14:17:32.710Z"
+    },
+    {
+        "id": 4,
+        "name": "Email",
+        "description": "Dikirim ke alamat email pelanggan untuk keperluan dokumentasi dan komunikasi lebih formal.",
+        "created_at": "2025-06-19T14:19:11.219Z"
+    },
+    {
+        "id": 5,
+        "name": "SMS",
+        "description": "Notifikasi berbasis teks singkat untuk keperluan penting, singkat, dan darurat.",
+        "created_at": "2025-06-19T14:19:20.651Z"
+    }
+  ],
+  "templates": [
+      {
+        "id": 1,
+        "category_id": 1,
+        "channel_id": 3,
+        "template_name": "Extend Notifications",
+        "subject": "Perpanjangan Masa Aktif Berhasil",
+        "body": "Dear Pelanggan Kapten $customer_name,\n\nTerimakasih sudah melakukan perpanjangan masa aktif wifi anda\n\nID Pelanggan\t\t: $customer_kode\nNama Pelanggan\t\t: $customer_name\nPaket Layanan\t\t: $customer_paket\nMasa aktif anda berlaku sampai : $customer_expired_at\n\nTerimakasih atas kepercayaan Anda telah memilih dan menggunakan layanan Kami.\nAyooooo !! ajak tetangga, teman & saudara untuk berlangganan kaptennaratel.com “internet cepat untuk keluarga hebat” ⭐⭐⭐⭐⭐\n\nApabila ada keluhan dan kendala layanan wifi kami, silahkan menghubungi customer service:\n📱 WA: +62 882-1201-1111\n💬 Telegram: @kapten_naratel_bot\n🌐 Live Chat Web Kapten: kaptennaratel.com\n\nTerimakasih",
+        "has_attachment": false,
+        "created_at": "2025-06-19T14:59:30.198Z",
+        "category": {
+            "id": 1,
+            "name": "Perpanjangan Layanan",
+            "description": "Dikirim setelah pelanggan memperpanjang masa aktif layanan internet mereka.",
+            "created_at": "2025-06-19T12:06:18.279Z"
+        },
+        "channel": {
+            "id": 3,
+            "name": "In-App Notification",
+            "description": "Muncul sebagai notifikasi dalam aplikasi mobile milik pelanggan ISP.",
+            "created_at": "2025-06-19T14:17:32.710Z"
+        }
+      },
+      {
+        "id": 2,
+        "category_id": 2,
+        "channel_id": 3,
+        "template_name": "Billing Reminder Notification",
+        "subject": "Tagihan Internet Anda Jatuh Tempo pada $customer_expired_at",
+        "body": "Yth. Sobat Kapten **$customer_name**,\r\n\r\nIni adalah pengingat tagihan layanan internet Anda. Mohon abaikan pesan ini jika sudah melakukan pembayaran.\r\n\r\n### **🧾 DETAIL TAGIHAN**\r\n\r\n* **ID Pelanggan**: `$customer_kode`\r\n* **Jatuh Tempo**: `$customer_expired_at`\r\n* **TOTAL TAGIHAN**: **`Rp. $total_amount`**\r\n\r\n### **💳 METODE PEMBAYARAN**\r\n\r\nSilakan lakukan pembayaran melalui:\r\n\r\n* **Virtual Account $va_provider**:\r\n    `$va_number`\r\n* **Panduan Pembayaran**:\r\n    [Lihat Cara Bayar](https://pembayaran.kaptennaratel.com/)\r\n\r\n⚠️ **CATATAN PENTING**\r\n> $va_note\r\n\r\n### **💬 BUTUH BANTUAN?**\r\n\r\nJika ada kendala, hubungi Customer Service kami:\r\n\r\n* 📱 **WhatsApp**: `+6288212022222`\r\n* 💬 **Telegram**: [@kapten_naratel_bot](https://t.me/kapten_naratel_bot)\r\n\r\nTerima kasih atas perhatian Anda. 🙏\r\n\r\nHormat kami,\r\n**Tim Kapten Naratel**\r\n",
+        "has_attachment": false,
+        "created_at": "2025-06-19T15:03:31.713Z",
+        "category": {
+            "id": 2,
+            "name": "Pengingat Tagihan",
+            "description": "Pengingat otomatis sebelum jatuh tempo pembayaran tagihan layanan internet pelanggan.",
+            "created_at": "2025-06-19T12:08:03.828Z"
+        },
+        "channel": {
+            "id": 3,
+            "name": "In-App Notification",
+            "description": "Muncul sebagai notifikasi dalam aplikasi mobile milik pelanggan ISP.",
+            "created_at": "2025-06-19T14:17:32.710Z"
+        }
+    },
+    {
+        "id": 3,
+        "category_id": 3,
+        "channel_id": 3,
+        "template_name": "Reset Mitra Notification",
+        "subject": "Penyesuaian Masa Aktif Layanan Anda",
+        "body": "Halo Kapten **$customer_name**,\r\n\r\nMohon maaf atas kendala teknis yang sempat terjadi.\r\n\r\nSebagai kompensasi, masa aktif Anda telah kami sesuaikan kembali.\r\n\r\n- **ID Pelanggan**: `$customer_kode`\r\n- **Paket**: `$customer_paket`\r\n- **Masa Aktif Kembali Normal s/d**: **$dateline**\r\n\r\nTerima kasih atas pengertian Anda.\r\n\r\nSalam,\r\n**Tim Kapten Naratel**",
+        "has_attachment": false,
+        "created_at": "2025-06-19T15:04:30.589Z",
+        "category": {
+            "id": 3,
+            "name": "Teknis",
+            "description": "Informasi kepada pelanggan terkait reset, perbaikan, atau koreksi masa aktif karena kendala.",
+            "created_at": "2025-06-19T12:08:13.990Z"
+        },
+        "channel": {
+            "id": 3,
+            "name": "In-App Notification",
+            "description": "Muncul sebagai notifikasi dalam aplikasi mobile milik pelanggan ISP.",
+            "created_at": "2025-06-19T14:17:32.710Z"
+        }
+    }
+  ],
+  "users" :[
+    {
+            "id": 10,
+            "name": "cihuy",
+            "email": "cihuy@kapten.com",
+            "phone": "1234567899"
+        },
+        {
+            "id": 5,
+            "name": "ufri",
+            "email": "ufri@gmail.com",
+            "phone": "62183123123"
+        }
+  ], 
+  "payment": [
+    {
+            "id": 1,
+            "name": "BCA",
+            "provider": "sparkpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BCA.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 3,
+            "name": "Indomaret",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/Indomaret.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 4,
+            "name": "Alfamart",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/Alfamart.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 6,
+            "name": "BRI",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BRI.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 7,
+            "name": "BNI",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BNI.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 8,
+            "name": "Mandiri",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/MANDIRI.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 9,
+            "name": "Permata",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/PERMATA.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 10,
+            "name": "BSI",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BSI.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 11,
+            "name": "CIMB",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/CIMB.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 12,
+            "name": "Sinarmas",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/SINARMAS.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 13,
+            "name": "BNC",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BNC.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 14,
+            "name": "BCAPC",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/BCA.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 15,
+            "name": "MANDIRIPC",
+            "provider": "winpay",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/MANDIRI.png",
+            "created_at": "2025-06-18T23:54:41.272Z",
+            "updated_at": null
+        },
+        {
+            "id": 17,
+            "name": "QR Mitra",
+            "provider": "mitra",
+            "image_url": "https://survey.kaptennaratel.com/api/upload/uploads/payment-methods/QR Mitra.png",
+            "created_at": "2025-06-24T13:26:25.587Z",
+            "updated_at": null
+        }
+    ], "orderlist": [
+        {
+            "order_id": 337,
+            "id_payment": 106,
+            "kode_order": "NRT-7-20250716T09:06:34Z",
+            "va_name": "Coba Aria",
+            "virtual_account": "1001449517403",
+            "payment_method": "Alfamart",
+            "tagihan": 120000,
+            "admin": 5000,
+            "total_amount": 125000,
+            "status" : "paid",
+            "contract_id": "al53fa068b-17b0-4787-990a-74037ec0b516",
+            "trx_id": "INV545eb0394d80c54581baKN0146",
+            "expired_at": "2025-08-06T02:06:34+07:00"
+        },{
+            "order_id": 337,
+            "id_payment": 106,
+            "kode_order": "NRT-7-20250716T09:06:34Z",
+            "va_name": "Coba Aria",
+            "virtual_account": "1001449517403",
+            "payment_method": "Alfamart",
+            "tagihan": 120000,
+            "admin": 5000,
+            "total_amount": 125000,
+            "status" : "failed",
+            "contract_id": "al53fa068b-17b0-4787-990a-74037ec0b516",
+            "trx_id": "INV545eb0394d80c54581baKN0146",
+            "expired_at": "2025-08-06T02:06:34+07:00"
+        }, {
+            "order_id": 337,
+            "id_payment": 106,
+            "kode_order": "NRT-7-20250716T09:06:34Z",
+            "va_name": "Coba Aria",
+            "virtual_account": "1001449517403",
+            "payment_method": "Alfamart",
+            "tagihan": 120000,
+            "admin": 5000,
+            "total_amount": 125000,
+            "status" : "pending",
+            "contract_id": "al53fa068b-17b0-4787-990a-74037ec0b516",
+            "trx_id": "INV545eb0394d80c54581baKN0146",
+            "expired_at": "2025-08-06T02:06:34+07:00"
+        }
+    ]
+}
