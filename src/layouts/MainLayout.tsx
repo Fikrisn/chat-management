@@ -11,7 +11,6 @@ type MainLayoutProps = {
 };
 
 const HEADER_HEIGHT = 72; // 18 * 4 = 72px (h-18 in Tailwind)
-const SIDEBAR_WIDTH = 288; // 72 * 4 = 288px (w-72 in Tailwind)
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,

@@ -80,3 +80,10 @@ export interface NotificationChannel {
   description?: string;
   created_at?: string;
 }
+
+export interface NotificationCategory {
+  id: number | string;
+  name: string;
+  description: string;
+  created_at: string;
+}

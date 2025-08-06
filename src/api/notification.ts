@@ -3,8 +3,8 @@ import { BASE_URL } from '../constants';
 
 import type {
   NotificationTemplate,
-  NotificationCategory,
   NotificationChannel,
+  NotificationCategory,
 } from '../types/notification';
 
 /**

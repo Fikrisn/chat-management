@@ -55,9 +55,6 @@ const OrderPage: React.FC = () => {
     return matchStatus && matchSearch;
   });
 
-  const stats = {
-    total: orders.length,
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-20">
